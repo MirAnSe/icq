@@ -37,11 +37,11 @@ public class Server {
         return null;
 
     }
-
+/*
     public static void main(String[] args) {
         Server server = new Server("8855");
         server.inMessage();
         //String out=server.inMessage();
         //System.out.println(out);
-    }
+    }*/
 }

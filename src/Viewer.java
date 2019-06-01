@@ -44,10 +44,10 @@ public class Viewer {
         frame.setResizable(false);
         frame.setVisible(true);
     }
-
+/*
     public void updateState(){
 
-    }
+    }*/
 
     public String getMessage(){
         String text=field.getText();

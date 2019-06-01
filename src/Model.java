@@ -3,27 +3,27 @@ import java.net.UnknownHostException;
 
 public class Model {
     Viewer viewer;
+    Server server;
 
-    Client client;
 
 
     Model(Viewer viewer) {
         this.viewer = viewer;
-        client = new Client();
-
+        server = new Server("8855");
 
     }
 
     public void doAction(String value) {
 
         if (value.equals("Send")) {
+            Client client = new Client();
             /*Scanner ob = new Scanner(System.in);
             String message = ob.nextLine();*/
 
 
             //Client client = new Client();
             try{
-                client.sendMessage("project-g31","4445", viewer.getMessage());
+                client.sendMessage("g31-11","8855", viewer.getMessage());
             }catch (NumberFormatException nfe){
                 System.out.println("NFE "+nfe);
                 //return false;
@@ -34,7 +34,7 @@ public class Model {
                 System.out.println("IOE "+ioe);
                 //return false;
             }finally {
-                viewer.updateState();
+               // viewer.updateState();
             }
         }
     }
