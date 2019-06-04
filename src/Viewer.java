@@ -10,6 +10,7 @@ public class Viewer {
     Controller controller = new Controller(this);
     JTextField field;
     JTextArea area;
+    JTextArea area2;
 
     Viewer(){
         JFrame frame = new JFrame("ICQ ver0.1");
@@ -29,7 +30,7 @@ public class Viewer {
         button1.addActionListener(controller);
         button1.setActionCommand("Send");
 
-        JTextArea area2 = new JTextArea();
+        area2 = new JTextArea();
         area2.setBounds(10,320,400,200);
 
         JButton button2 = new JButton("Clear");
@@ -54,5 +55,10 @@ public class Viewer {
         area.setText(area.getText()+'\n'+text);
         field.setText("");
         return text;
+    }
+
+    public void setText (String text){
+        String text2=area2.getText();
+        area2.setText(text2+'\n'+text);
     }
 }

@@ -9,8 +9,8 @@ public class Model {
 
     Model(Viewer viewer) {
         this.viewer = viewer;
-        server = new Server("8855");
-
+        server = new Server("4445", viewer);
+        //server.inMessage();
     }
 
     public void doAction(String value) {
@@ -23,7 +23,7 @@ public class Model {
 
             //Client client = new Client();
             try{
-                client.sendMessage("g31-11","8855", viewer.getMessage());
+                client.sendMessage("project-g31","4445", viewer.getMessage());
             }catch (NumberFormatException nfe){
                 System.out.println("NFE "+nfe);
                 //return false;
