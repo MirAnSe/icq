@@ -6,7 +6,7 @@ import java.net.SocketException;
 //import java.net.InetAddress;
 //import java.net.UnknownHostException;
 
-public class Server  extends Thread{
+public class Server extends Thread{
 
     private DatagramSocket socket=null;
     private Viewer viewer;

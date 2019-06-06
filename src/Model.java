@@ -4,12 +4,14 @@ import java.net.UnknownHostException;
 public class Model {
     Viewer viewer;
     Server server;
+    Tcp tcp;
 
 
 
     Model(Viewer viewer) {
         this.viewer = viewer;
         server = new Server("4445", viewer);
+        tcp = new Tcp(4445,"project-g31",viewer);
         //server.inMessage();
     }
 
