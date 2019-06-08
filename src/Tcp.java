@@ -1,21 +1,19 @@
 import java.io.*;
 import java.net.*;
 
-public class Tcp extends Thread{
+public class Tcp{
 
-    Viewer viewer;
-    String hostName;
-    int port;
+    //Viewer viewer;
+    //String hostName;
+    //int port;
 
     Tcp(int port,String hostName, Viewer viewer){
-        this.viewer = viewer;
-        this.hostName = hostName;
-        this.port = port;
+        //this.viewer = viewer;
+        //this.hostName = hostName;
+        //this.port = port;
         //inMsg();
-        start();
-    }
-/*
-    public void run(){
+        //start();
+        //sendMsg();
         try(
                 Socket echoSocket = new Socket(hostName,port);
                 PrintWriter out = new PrintWriter(echoSocket.getOutputStream(), true);
@@ -35,8 +33,12 @@ public class Tcp extends Thread{
         }catch (IOException ioe){
             System.out.println("ioe "+ioe);
         }
-    }*/
+    }
 
+    public void sendMsg(){
+
+    }
+/*
     public void run() {
         //while (true){
             try(
@@ -59,5 +61,5 @@ public class Tcp extends Thread{
                 System.out.println("ioe "+ioe);
             }
         //}
-    }
+    }*/
 }

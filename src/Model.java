@@ -5,6 +5,7 @@ public class Model {
     Viewer viewer;
     Server server;
     Tcp tcp;
+    //Client client;
 
 
 
@@ -12,6 +13,7 @@ public class Model {
         this.viewer = viewer;
         server = new Server("4445", viewer);
         tcp = new Tcp(4445,"project-g31",viewer);
+        //client = new Client();
         //server.inMessage();
     }
 
